@@ -242,7 +242,7 @@ fn get_named_parametrized_route(
 
                 return safe_key;
             }
-            format!("/{}{}", interception_marker.unwrap_or(&""), (segment))
+            format!("/{}", (segment))
         })
         .collect::<Vec<String>>()
         .join("");
