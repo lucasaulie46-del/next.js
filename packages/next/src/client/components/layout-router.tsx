@@ -354,6 +354,7 @@ function InnerScrollAndFocusHandlerNew(props: ScrollAndFocusHandlerProps) {
 
         const alignToTop = false
         disableSmoothScrollDuringRouteTransition(
+          // @ts-expect-error -- Needs `@types/react-dom` update
           domNode.experimental_scrollIntoView.bind(domNode, alignToTop),
           {
             // We will force layout by querying domNode position
